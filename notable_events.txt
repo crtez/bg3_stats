@@ -1,0 +1,12 @@
+AttackedBy
+AddedTo
+CriticalHitBy
+DroppedBy
+DestroyedBy
+GainedControl
+UsingSpell
+UsingSpellOnTarget
+UsingSpellAtPosition
+UsingSpellInTrigger
+UsingSpellOnZoneWithTarget
+MissedBy

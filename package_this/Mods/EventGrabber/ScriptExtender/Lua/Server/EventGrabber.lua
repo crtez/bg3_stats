@@ -246,7 +246,7 @@ local eventsWithArity = {
 }
 
 local function genericHandler(eventName, ...)
-    _P(eventName .. " triggered with args: " .. table.concat({...}, ", "))
+    _P(eventName .. "," .. table.concat({...}, ","))
 end
 
 for _, eventData in ipairs(eventsWithArity) do
