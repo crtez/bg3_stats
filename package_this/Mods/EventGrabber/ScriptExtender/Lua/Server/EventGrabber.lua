@@ -180,7 +180,6 @@ local eventsWithArity = {
     {"RulesetModifierChangedInt", 3},
     {"RulesetModifierChangedString", 3},
     {"SafeRomanceOptionChanged", 2},
-    {"Saw", 3},
     {"ScatteredAt", 4},
     {"ScreenFadeCleared", 2},
     {"ScreenFadeDone", 2},
