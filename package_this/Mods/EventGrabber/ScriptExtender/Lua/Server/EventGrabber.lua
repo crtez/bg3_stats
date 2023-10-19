@@ -245,8 +245,27 @@ local eventsWithArity = {
 }
 
 local function genericHandler(eventName, ...)
-    _P(eventName .. "," .. table.concat({...}, ","))
+    local args = {...}
+    local outputTable = {}
+    
+    -- Start JSON string
+    table.insert(outputTable, '{"eventName":"' .. eventName .. '"')
+
+    for i = 1, #args do
+        local value = args[i]
+
+        -- Escape any double quotes in string values
+        value = '"' .. tostring(value):gsub('"', '\\"') .. '"'
+
+        table.insert(outputTable, ', "param' .. i .. '":' .. value)
+    end
+
+    -- End JSON string
+    table.insert(outputTable, "}")
+
+    _P(table.concat(outputTable))
 end
+
 
 for _, eventData in ipairs(eventsWithArity) do
     local eventName = eventData[1]
