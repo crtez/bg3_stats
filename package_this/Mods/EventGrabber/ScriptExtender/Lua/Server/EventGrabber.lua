@@ -192,7 +192,6 @@ local eventsWithArity = {
     {"StartAttack", 4},
     {"StartAttackPosition", 6},
     {"StartedDisarmingTrap", 2},
-    {"StartedFleeing", 1},
     {"StartedLockpicking", 2},
     {"StoppedCombining", 6},
     {"StoppedDisarmingTrap", 2},
